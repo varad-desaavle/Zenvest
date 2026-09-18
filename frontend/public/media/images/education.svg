@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eaf3ff"/>
+      <stop offset="1" stop-color="#d7e8ff"/>
+    </linearGradient>
+    <linearGradient id="book1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f8cff"/>
+      <stop offset="1" stop-color="#1769e0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="650" fill="#fff"/>
+
+  <!-- soft background -->
+  <circle cx="440" cy="290" r="250" fill="#f5f9ff"/>
+  <circle cx="440" cy="290" r="190" fill="#edf5ff"/>
+
+  <!-- decorative chart -->
+  <g opacity=".9">
+    <polyline points="620,145 665,115 705,135 755,85 810,105"
+              fill="none" stroke="#397fe8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="620" cy="145" r="7" fill="#397fe8"/>
+    <circle cx="665" cy="115" r="7" fill="#397fe8"/>
+    <circle cx="705" cy="135" r="7" fill="#397fe8"/>
+    <circle cx="755" cy="85" r="7" fill="#397fe8"/>
+    <circle cx="810" cy="105" r="7" fill="#397fe8"/>
+  </g>
+
+  <!-- graduation cap -->
+  <g transform="translate(180 75)" filter="url(#shadow)">
+    <polygon points="0,45 95,5 190,45 95,85" fill="#1f4f9c"/>
+    <polygon points="40,58 95,82 150,58 150,105 95,128 40,105" fill="#2865bd"/>
+    <line x1="160" y1="43" x2="160" y2="100" stroke="#f5b52b" stroke-width="6"/>
+    <circle cx="160" cy="105" r="7" fill="#f5b52b"/>
+  </g>
+
+  <!-- laptop -->
+  <g filter="url(#shadow)">
+    <rect x="205" y="215" width="490" height="285" rx="22" fill="#202d43"/>
+    <rect x="222" y="232" width="456" height="250" rx="10" fill="url(#screen)"/>
+    <!-- browser bar -->
+    <circle cx="244" cy="254" r="6" fill="#8fb4e8"/>
+    <circle cx="263" cy="254" r="6" fill="#8fb4e8"/>
+    <circle cx="282" cy="254" r="6" fill="#8fb4e8"/>
+    <rect x="315" y="247" width="235" height="14" rx="7" fill="#c9dcf5"/>
+
+    <!-- course card -->
+    <rect x="250" y="285" width="260" height="155" rx="15" fill="#fff"/>
+    <rect x="270" y="305" width="125" height="80" rx="10" fill="#dcecff"/>
+    <circle cx="333" cy="344" r="25" fill="#397fe8"/>
+    <polygon points="326,330 326,358 348,344" fill="#fff"/>
+    <rect x="415" y="305" width="70" height="10" rx="5" fill="#b8d0ef"/>
+    <rect x="415" y="327" width="52" height="10" rx="5" fill="#cbdcf1"/>
+    <rect x="415" y="349" width="60" height="10" rx="5" fill="#cbdcf1"/>
+    <rect x="270" y="400" width="215" height="10" rx="5" fill="#d0e1f6"/>
+
+    <!-- chart inside laptop -->
+    <rect x="530" y="285" width="125" height="155" rx="15" fill="#fff"/>
+    <line x1="550" y1="405" x2="550" y2="320" stroke="#d5e2f2" stroke-width="2"/>
+    <line x1="550" y1="405" x2="635" y2="405" stroke="#d5e2f2" stroke-width="2"/>
+    <polyline points="555,390 575,370 592,378 608,340 620,350 635,315"
+              fill="none" stroke="#397fe8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="635" cy="315" r="5" fill="#397fe8"/>
+
+    <!-- laptop base -->
+    <path d="M160 500 H740 L790 535 Q800 545 780 548 H120 Q100 545 110 535 Z"
+          fill="#9db2cf"/>
+    <rect x="395" y="510" width="110" height="12" rx="6" fill="#7188a6"/>
+  </g>
+
+  <!-- books -->
+  <g filter="url(#shadow)">
+    <rect x="610" y="475" width="205" height="42" rx="8" fill="url(#book1)"/>
+    <rect x="625" y="518" width="190" height="42" rx="8" fill="#38a47a"/>
+    <rect x="595" y="561" width="220" height="42" rx="8" fill="#f5a623"/>
+    <rect x="610" y="475" width="15" height="42" rx="4" fill="#1659bd"/>
+    <rect x="625" y="518" width="15" height="42" rx="4" fill="#25845f"/>
+    <rect x="595" y="561" width="15" height="42" rx="4" fill="#d98508"/>
+  </g>
+
+  <!-- open notebook -->
+  <g filter="url(#shadow)">
+    <path d="M80 525 Q165 500 250 530 L250 615 Q165 585 80 610 Z" fill="#fff"/>
+    <path d="M250 530 Q335 500 420 525 L420 610 Q335 585 250 615 Z" fill="#fff"/>
+    <path d="M250 530 V615" stroke="#c5d5e8" stroke-width="3"/>
+    <g stroke="#d5e1ee" stroke-width="3">
+      <line x1="105" y1="550" x2="225" y2="545"/><line x1="105" y1="570" x2="225" y2="565"/>
+      <line x1="275" y1="550" x2="395" y2="545"/><line x1="275" y1="570" x2="395" y2="565"/>
+    </g>
+    <rect x="170" y="548" width="125" height="10" rx="5" transform="rotate(-10 170 548)" fill="#397fe8"/>
+  </g>
+
+  <!-- plant -->
+  <g>
+    <rect x="35" y="445" width="65" height="70" rx="12" fill="#dfe9f5"/>
+    <path d="M68 448 C65 410 70 380 86 355" fill="none" stroke="#328e68" stroke-width="7"/>
+    <path d="M70 420 C35 408 25 385 28 363 C53 364 72 382 70 420Z" fill="#48aa7e"/>
+    <path d="M76 405 C88 370 112 355 136 360 C130 388 109 404 76 405Z" fill="#3a9a70"/>
+    <path d="M68 445 C40 438 28 420 30 400 C52 400 68 417 68 445Z" fill="#63b88e"/>
+  </g>
+
+  <!-- small lightbulb -->
+  <g transform="translate(720 270)">
+    <circle cx="45" cy="45" r="36" fill="#fff4bf"/>
+    <path d="M30 44 Q30 20 45 20 Q60 20 60 44 Q60 55 52 62 H38 Q30 55 30 44Z"
+          fill="#ffc83d"/>
+    <rect x="38" y="62" width="14" height="7" rx="3" fill="#d89f18"/>
+    <path d="M45 3 V12 M12 18 L20 25 M78 18 L70 25" stroke="#ffc83d" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
