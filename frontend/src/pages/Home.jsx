@@ -13,12 +13,11 @@ const Home = () => {
             if (!cookies.token) {
                 navigate("/login");
             }
-            const { data } = await axios.post(
-                "http://localhost:4000",
-                {},
+            const { data } = await axios.get(
+                "https://zenvest-backend-sesu.onrender.com/api/auth/session",
                 { withCredentials: true }
             );
-            const { status, user } = data;
+            const { success: status, user } = data;
             setUsername(user);
             return status
                 ? toast(`Hello ${user}`, {
