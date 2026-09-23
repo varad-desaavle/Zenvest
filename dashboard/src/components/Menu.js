@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { apiBaseUrl, loginUrl } from "../config";
 
 const Menu = () => {
     const [selectedMenu, setSelectedMenu] = useState(0);
@@ -16,8 +17,10 @@ const Menu = () => {
     };
 
     const handleSignout = async () => {
-        await axios.post("http://localhost:3002/api/auth/signout", {}, { withCredentials: true });
-        window.location.replace("http://localhost:3000/login");
+        await axios.post(`${apiBaseUrl}/api/auth/signout`, {}, { withCredentials: true });
+        if (loginUrl) {
+            window.location.replace(loginUrl);
+        }
     };
 
     const menuClass = "menu";

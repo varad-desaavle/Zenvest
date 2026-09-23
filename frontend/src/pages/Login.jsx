@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { signIn } from "../auth/authClient";
+import { dashboardUrl } from "../config";
 import "./AuthPages.css";
 
 const Login = () => {
@@ -37,7 +38,11 @@ const Login = () => {
             const { success, message } = data;
             if (success) {
                 handleSuccess(message);
-                window.location.replace("http://localhost:3001/");
+                if (dashboardUrl) {
+                    window.location.replace(dashboardUrl);
+                } else {
+                    handleError("Dashboard is not configured yet");
+                }
             } else {
                 handleError(message);
             }

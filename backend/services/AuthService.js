@@ -6,7 +6,7 @@ const TOKEN_LIFETIME = 3 * 24 * 60 * 60 * 1000;
 
 const getCookieOptions = () => ({
     httpOnly: true,
-    sameSite: "lax",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     secure: process.env.NODE_ENV === "production",
     maxAge: TOKEN_LIFETIME,
 });

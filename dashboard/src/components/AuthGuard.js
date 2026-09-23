@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-const LOGIN_URL = "http://localhost:3000/login";
+import { apiBaseUrl, loginUrl } from "../config";
 
 const AuthGuard = ({ children }) => {
     const [isChecking, setIsChecking] = useState(true);
@@ -10,14 +9,16 @@ const AuthGuard = ({ children }) => {
     useEffect(() => {
         let isMounted = true;
 
-        axios.get("http://localhost:3002/api/auth/session", { withCredentials: true })
+        axios.get(`${apiBaseUrl}/api/auth/session`, { withCredentials: true })
             .then(() => {
                 if (isMounted) {
                     setIsAuthenticated(true);
                 }
             })
             .catch(() => {
-                window.location.replace(LOGIN_URL);
+                if (loginUrl) {
+                    window.location.replace(loginUrl);
+                }
             })
             .finally(() => {
                 if (isMounted) {

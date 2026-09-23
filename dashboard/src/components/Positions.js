@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { apiBaseUrl } from "../config";
 
 const Positions = () => {
     const [allPositions, setAllPositions] = useState([]);
 
     useEffect(() => {
         // Connect to backend and fetch positions from database
-        axios.get("http://localhost:3002/allPositions", { withCredentials: true }).then((res) => {
+        axios.get(`${apiBaseUrl}/allPositions`, { withCredentials: true }).then((res) => {
             console.log(res.data);
             setAllPositions(res.data);
         });

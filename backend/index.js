@@ -17,6 +17,13 @@ const { requireAuthentication } = require("./Middlewares/RequireAuthentication")
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
+const allowedOrigins = [
+    process.env.FRONTEND_URL,
+    process.env.DASHBOARD_URL,
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://localhost:3001",
+].filter(Boolean);
 
 const app = express();
 
@@ -27,11 +34,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: [
-            "http://localhost:3000",
-            "http://localhost:5173",
-            "http://localhost:3001"
-        ],
+        origin: allowedOrigins,
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true,
     })

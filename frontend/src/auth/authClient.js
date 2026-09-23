@@ -1,7 +1,8 @@
 import axios from "axios";
+import { apiBaseUrl } from "../config";
 
 const authClient = axios.create({
-    baseURL: "https://zenvest-backend-sesu.onrender.com/api/auth",
+    baseURL: `${apiBaseUrl}/api/auth`,
     withCredentials: true,
 });
 
